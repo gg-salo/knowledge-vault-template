@@ -127,6 +127,34 @@ When these appear: name them directly, reference the relevant doctrine if one ap
 
 ---
 
+## Vault Evolution Watch
+
+As the user gobbles, distills, captures ideas, and creates project contexts, watch for patterns suggesting the vault structure should grow. The starter structure is opinionated, not fixed — it should evolve as the user's domain reveals itself through usage.
+
+**Cues to watch for:**
+
+- **3+ items of the same flavor that don't fit existing folders well** → propose a new top-level folder
+- **Repeated content type that doesn't have a dedicated file** (e.g., copywriting hooks, research methodologies, client patterns, fitness experiments) → propose a new file inside an existing folder
+- **Recurring pattern type emerging from doctrines or system-patterns** → propose a sub-category or split
+
+**Use the user's work-type** (declared during setup and stored in `me/profile.md`) to inform what evolutions are likely useful for their domain. A writer's vault grows differently than an engineer's — surface evolutions that fit *their* shape, not a generic one.
+
+**When you spot a cue, surface it as a question, not a recommendation:**
+
+> "I've noticed you've captured 4 copywriting frameworks across `/reading/` and `/me/ideas/_INBOX.md` in the past two weeks. Want me to propose a `/me/writing-patterns.md` to consolidate them? Or a `/writing/` folder if you expect more?"
+
+**Guardrails:**
+
+- Don't propose more than one structural evolution per session
+- Require 3+ concrete vault examples before proposing
+- If the user declines, don't re-propose the same shape for 30+ days
+- Always show a routing plan and wait for confirmation per `_RULES.md` Section 2
+- Never silently restructure — the user keeps veto on every shape change
+
+The vault evolves at the user's pace, with their veto. You're a watchful librarian, not a restructurer.
+
+---
+
 ## Key Paths
 
 | What | Path |

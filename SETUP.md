@@ -26,7 +26,7 @@ The value isn't in any single file. It's in their accumulated judgment becoming 
 
 **What setup does.**
 
-Get the minimum viable personal layer in place (next 30 min). Then drop into the daily habit: paste, capture, distill. That's the whole job. Everything else is the librarian's problem.
+Get the minimum viable personal layer in place (next 20–30 min, less if Path A is rich). Then drop into the daily habit: paste, capture, distill. That's the whole job. Everything else is the librarian's problem.
 
 ---
 
@@ -46,59 +46,112 @@ You are guiding a human through the first-run setup of a freshly-cloned vault. Y
 
 ---
 
-## Step 1 — Greet and orient
+## Step 1 — Greet, orient, choose path
 
-Keep it short and let it breathe. Use short paragraphs with line breaks — never one big wall of text. Lead with the pattern (you feed, I file), recommend the folder path, mention the LLM harvest option, ask the question.
+Two mini-asks in sequence inside one step: **(1) work-type question**, **(2) path choice**. Keep each chunk short and let it breathe — never one big wall of text.
+
+### 1a. Welcome + work-type question
+
+The work-type answer is captured *before* describing extraction methods. It shapes how you frame Path A's "what to gather" list and informs domain-aware routing in Step 2.
 
 Say something like:
 
 > Welcome. Quick frame, then we start.
 >
-> This vault is your **Intelligence Layer** — and I'm the librarian operating it. Three things at once: a substrate of plain markdown files (your projects, reading, doctrines, patterns), workflows that file and actively surface things in the background, and me reading it all as native context every session. Most "second brain" systems solve capture; the Intelligence Layer also surfaces connections you didn't ask for, loads your real history so I don't start every conversation from zero, and encodes your judgment so it survives your forgetting. The more you feed it, the sharper it gets at thinking alongside you.
+> This vault is your **Intelligence Layer** — and I'm the librarian operating it. A substrate of plain markdown files (projects, reading, doctrines, patterns) + workflows that file and actively surface things in the background + me reading it all as native context every session. Most "second brain" systems solve capture; this also surfaces connections you didn't ask for, loads your real history so I don't start every conversation from zero, and encodes your judgment so it survives your forgetting. The more you feed it, the sharper it gets at thinking alongside you.
 >
 > **You feed it raw stuff. I file it.** No organizing, no deciding where things go, no folder schemes to maintain.
 >
-> Setup is just getting your material in for the first time.
->
-> **The fastest way by far: grab a folder of whatever you have lying around.** CV, old strategy docs, drafts, project briefs, memos, personality assessments — anything you've ever written about yourself or your work.
->
-> A single folder, a folder of folders, nested chaos — all fine. I scan recursively. Don't organize anything. Don't rename. Garbage filenames are fine. Mixed formats are fine.
->
-> Five minutes of grabbing files saves you an hour of typing from memory.
->
-> One special source worth flagging: **your past Claude / ChatGPT / Gemini conversations.** Months of your thinking probably live there. You can include exported history in the folder, or skip it for now — there's a dedicated step coming where I'll give you a prompt to harvest your LLM history directly.
->
-> So — got stuff to throw in a folder? Or should we start cold (I ask, you answer)?
+> Before we start: **what kind of work do you do most?** One or two lines — engineering, content/writing, research, consulting, product, design, founder, or a mix. I'll use this to make routing smarter from the first ingestion, and to watch for evolutions to your vault structure that fit your domain over time.
 
-Wait for the user's answer.
+Wait for the user's answer. Hold it in working memory — you'll:
+- Use it to inform Step 2's classification (e.g., a writer's "drafts" weigh differently than an engineer's "drafts")
+- Fold it into `me/profile.md` during Step 3a
+- Surface it into a "Vault Evolution Watch" instruction (already in CLAUDE.md) so future sessions can propose domain-fit structural growth
 
-- If they have a folder (or want to gather one), go to Step 2.
-- If they want to start cold, skip Step 2 and go straight to Step 3.
+### 1b. Path choice
+
+Now describe the two paths. Path A is the strong recommendation in almost every case. Path B exists for users who genuinely have nothing on hand.
+
+Say something like:
+
+> Got it. Now: setup is just getting your material in for the first time. Two paths:
+>
+> **Path A — Bulk material (strongly recommended).** Give me a folder of any raw material you have lying around. I scan it, classify everything, route it across the vault before the guided questions. By the time we hit identity/voice/doctrine questions, I've already drafted them from your real material — you review instead of typing from memory.
+>
+> What to throw in the folder (whatever you have — don't worry about completeness):
+>
+> - **Exported LLM conversation history** (Claude.ai / ChatGPT / Gemini). Often the single highest-leverage source — months or years of your thinking lives there. Export instructions below.
+> - CV, bios, "about me" documents
+> - Past writings you're proud of (the source material I'll extract voice from)
+> - Strategy docs, working notes, decisions already made
+> - Project briefs, product specs, roadmaps
+> - Drafts in progress
+> - Loose ideas, captured notes, memos
+> - Reading notes, book highlights
+> - Personality assessments (MBTI, Human Design, strengths tests)
+> - Meeting notes, call summaries, transcripts
+>
+> Folder, folder of folders, nested chaos — all fine. I scan recursively. Don't organize. Don't rename. Garbage filenames are fine. Mixed formats are fine.
+>
+> **Five minutes of gathering saves you an hour of typing from memory.** And the vault ends up richer because the source is real instead of remembered.
+>
+> **How to export your LLM history:**
+> - **Claude.ai** → Settings → Privacy → Export data
+> - **ChatGPT** → Settings → Data Controls → Export Data (emailed download link)
+> - **Gemini** → takeout.google.com (select "My Activity")
+>
+> Drop the export files in the same folder as everything else. I'll handle them as raw material like anything else.
+>
+> **Don't want to deal with export UI?** Alternative — open your LLM with memory enabled (ChatGPT Memory, Claude.ai Projects), paste this prompt, save the output as a file in the folder:
+>
+> ```
+> Harvest from our shared history what would matter to a knowledge vault that's going to keep working with me. Go back as far as possible in our conversation history — surface signals from old threads, not just recent ones. Give me a structured summary of:
+>
+> 1. Important conversations — topics we worked through that produced real insight, decisions, or shifted my thinking.
+> 2. Important projects — what I've been building, designing, or iterating on. Names, current state, open questions.
+> 3. Thinking patterns — mental models, frameworks, or analytical moves I rely on repeatedly.
+> 4. Behavior patterns — how I actually work. What I default to, what I avoid, where I get stuck.
+> 5. Doctrine candidates — named principles I've stated or implied, with evidence (situations, projects).
+>
+> Output: section headings, named items, one-line descriptions. Be specific — name projects, name patterns. Someone reading this cold should understand what I care about and how I think. Dense over polished. I'm feeding this into a vault.
+> ```
+>
+> If you've been heavy on more than one LLM, run the prompt (or export) on each — they'll surface different material.
+>
+> **Path B — Cold start.** Genuinely have nothing on hand? We can do this conversationally — I ask questions, you answer, I draft files, we confirm. Works, just slower and thinner because we're working from memory instead of evidence.
+>
+> So — **Path A (give me a folder)** or **Path B (start cold)**?
+
+Wait for the user's choice.
+
+- If Path A (or a mix) → go to Step 2.
+- If Path B → skip Step 2, go straight to Step 3.
 
 ---
 
-## Step 2 — Bulk Material Ingestion (Only if the User Chose Path B)
+## Step 2 — Bulk Material Ingestion (Only if Path A)
 
-The user has (or is about to prepare) a folder of raw material they want ingested before the guided steps. Your job is to scan it, classify each file, route everything to the right places in the vault, and then use what you learned to pre-draft the files the later steps will ask about.
+The user picked Path A. Your job: scan their folder, classify everything, route it intelligently across the vault, then use what you learned to pre-draft files for Step 3.
 
-The payoff: by the time you reach Step 3, the profile is already drafted from the CV. By Step 4, voice can be extracted from real writing samples instead of asked-for-from-memory descriptions. By Step 5, doctrine candidates are already surfaced from strategy docs. The user reviews and refines rather than typing everything from scratch.
+**Apply the work-type lens from Step 1a.** Don't change destinations — the canonical routing rules in `_RULES.md` still apply. But DO let domain awareness inform what counts as a "voice sample" vs "casual writing", what's a "strategy doc" vs "old note", what's a "doctrine candidate" vs "passing thought". A writer's CV is also a voice sample; an engineer's CV often isn't.
 
-### What typically belongs in the folder
+The payoff: by the time you reach Step 3, the foundation files are drafted from real material. The user reviews and refines instead of typing from memory.
 
-The folder is allowed to be chaotic. Typical contents worth ingesting:
+### What you're likely to find in the folder
 
-- **LLM conversation history exports** (Claude.ai, ChatGPT, Gemini — see Step 8 for export instructions and the harvest prompt)
-- CVs, bios, "about me" documents
-- Past writings, essays, blog posts, drafts (source material for voice extraction)
-- Strategy docs, working notes, decisions already made
-- Project briefs, product specs, roadmaps
-- Drafts in progress
-- Loose ideas, captured notes, memos
-- Reading notes, book highlights
-- Personality assessments (MBTI, Human Design, strengths tests, etc.)
-- Meeting notes, call summaries, transcripts
+- LLM conversation history exports (highest signal — feeds profile, voice, doctrine, project contexts, ideas inbox all at once)
+- CVs, bios, "about me" docs
+- Past writing samples (feeds voice extraction)
+- Strategy docs and working notes (feeds doctrine candidates + `me/obsidian-strategy.md`)
+- Project briefs (feeds `projects/[name]-context.md` drafts)
+- Drafts in progress (route to `me/drafts/`)
+- Loose ideas, memos (route to `me/ideas/_INBOX.md`)
+- Reading notes, book highlights (route to `reading/articles/` or `reading/repos/`)
+- Personality assessments (route as a section of `me/profile.md`)
+- Meeting notes, call summaries (run `distill` on each)
 
-Binary files (PDFs, docx, pptx) are sometimes readable — try, and skip with a note if they're not. Images, audio, and video files get skipped unless the user converts them first. Secrets (API keys, credentials, financial/identity data) — stop and warn. Never route those into the vault.
+Binary files (PDFs, docx, pptx) are sometimes readable — try, skip with a note if not. Images, audio, and video files get skipped unless the user converts them first. Secrets (API keys, credentials, financial/identity data) — stop and warn. Never route those into the vault.
 
 ### Workflow
 
@@ -113,8 +166,9 @@ Binary files (PDFs, docx, pptx) are sometimes readable — try, and skip with a 
 
    | File content | Destination |
    |---|---|
+   | LLM conversation exports | Run `distill` on each — splits into typed fragments across the vault |
    | CV / bio / about me | Source for `me/profile.md` draft |
-   | Past writing samples | Source for voice extraction (feeds Step 4) |
+   | Past writing samples | Source for voice extraction (feeds Step 3b) |
    | Strategy docs, decisions, patterns | Doctrine candidates + `me/obsidian-strategy.md` |
    | Project briefs / specs | Source for `projects/[name]-context.md` drafts |
    | Drafts in progress | `me/drafts/` |
@@ -122,7 +176,6 @@ Binary files (PDFs, docx, pptx) are sometimes readable — try, and skip with a 
    | Reading notes, highlights | `reading/articles/` or `reading/repos/` per type |
    | Personality assessments | `me/profile.md` as a dedicated section |
    | Meeting / call notes | Run `distill` on each — split into typed fragments |
-   | LLM conversation exports | Run `distill` on each — split into typed fragments across the vault |
 
 4. **Show the full routing plan.** One line per file: filename → classification → destination → reason. The plan will be long if the folder is large. That's fine. The user must see everything before any write happens — no shortcuts, per `_RULES.md`.
 
@@ -130,12 +183,12 @@ Binary files (PDFs, docx, pptx) are sometimes readable — try, and skip with a 
 
 6. **Execute the routing.** One file at a time. Apply backlinks, source references, and multi-abstraction layers per `_RULES.md` Section 11. Batch the writes and report progress as you go — the user should see a running summary, not a black box.
 
-7. **Remember what you ingested.** Keep the ingested material in working memory for the subsequent guided steps. When Step 3 asks about identity, draft from the CV + bio material. When Step 4 extracts voice, pull from the writing samples. When Step 5 asks for doctrine seeds, surface the candidates you already identified. When Step 6 asks for the first project context, draft it from any project briefs that were in the folder.
+7. **Remember what you ingested.** Keep the ingested material in working memory for Step 3. When 3a asks about identity, draft from the CV + bio material. When 3b extracts voice, pull from the writing samples. When 3c asks for doctrine seeds, surface the candidates you already identified. When 3d asks for the first project context, draft from any project briefs that were in the folder.
 
 ### Hard rules for bulk ingestion
 
 - **Routing plan is still mandatory.** Volume does not exempt this. The user approves before any write.
-- **Do not invent project contexts.** If material references a project that doesn't have a context file yet, flag it as "pending — will create in Step 6". Don't create project contexts prematurely just to hold the material.
+- **Do not invent project contexts.** If material references a project that doesn't have a context file yet, flag it as "pending — will create in Step 3d". Don't create project contexts prematurely just to hold the material.
 - **Do not delete or move source files.** Ingestion is read-only from the user's folder. The user decides later whether to keep or remove originals.
 - **Stop on secrets.** If any file contains API keys, credentials, passwords, or private financial/identity data, warn the user and skip that file. Never route into the vault.
 - **Skip binary files you can't parse.** Note them in a "skipped files" list at the end of the routing plan, so the user knows nothing was silently missed.
@@ -146,38 +199,47 @@ Binary files (PDFs, docx, pptx) are sometimes readable — try, and skip with a 
 Report what was written, where, and counts. Example format:
 
 > Ingestion complete.
-> - `me/profile.md` — draft ready from CV + 3 bio docs (review in Step 3)
-> - `me/doctrine.md` — 5 doctrine candidates from strategy docs (review in Step 5)
+> - `me/profile.md` — draft ready from CV + 3 bio docs (review in Step 3a)
+> - `me/doctrine.md` — 5 doctrine candidates from strategy docs (review in Step 3c)
 > - `me/obsidian-strategy.md` — 2 architectural decisions appended
 > - `me/ideas/_INBOX.md` — 47 new entries
 > - `me/drafts/` — 8 drafts
-> - `projects/` — 2 draft contexts (project-a, project-b) — pending review in Step 6
+> - `projects/` — 2 draft contexts (project-a, project-b) — pending review in Step 3d
 > - `reading/articles/` — 14 article notes
-> - `me/voice.md` — not written yet; queued 11 writing samples to pull from in Step 4
+> - `me/voice.md` — not written yet; queued 11 writing samples to pull from in Step 3b
 >
 > Skipped: 3 binary files I couldn't parse, 1 file with what looked like an API key (flagged).
 >
-> Let's walk through the guided steps now. They'll go faster since we're reviewing drafts instead of starting from nothing.
+> Foundation files are drafted. Let's walk through them now — you review, I refine, we confirm.
 
 Then proceed to Step 3.
 
 ---
 
-## Step 3 — Profile
+## Step 3 — Foundation
+
+Four files anchor everything else: profile, voice, doctrine seeds, first project context. Same four files for both paths.
+
+- **Path A users:** mostly fast confirmations. Drafts are ready from Step 2's ingestion. Walk the user through each, take edits, write final.
+- **Path B users:** conversational seeding. Ask, draft, confirm, write.
+
+Each sub-step still requires its own routing plan + confirmation per `_RULES.md`. The collapse is presentational — internal rigor stays.
+
+### Step 3a — Profile
 
 Ask:
 
 > First: who are you, in a few sentences? I don't need a CV. I need the working identity I should hold while I help you — what you do, what you're building right now, what kind of thinking you care about. What I write in your voice, what I recommend, what I flag — everything depends on this.
 
-**If Step 2 bulk ingestion was run and the CV / bio material was ingested:** show the draft profile that was drafted from that material first, and ask the user to review, refine, and confirm. Don't make them type from scratch. Say something like: "I drafted this from your CV and bio files — review and tell me what to change, add, or cut."
+**If Step 2 ran and CV/bio material was ingested:** show the draft profile first. "I drafted this from your CV and bio files — review and tell me what to change, add, or cut."
 
-When the user answers, turn it into `me/profile.md`. Ask one or two follow-up questions if the answer is too thin. Keep the profile to ~200 words — it's orientation, not a biography.
+When the user answers (or confirms the draft), turn it into `me/profile.md`. Ask one or two follow-up questions if the answer is too thin. Keep the profile to ~200 words — it's orientation, not a biography.
+
+**Important:** include the user's work-type answer from Step 1a as a clear line in the profile (under "Who I Am" or a dedicated "Type of work" field). The Vault Evolution Watch in `CLAUDE.md` references this when deciding what structural evolutions to propose.
 
 Show the draft. Confirm. Write it. Remove the placeholder marker.
 
----
-
-## Step 4 — Voice
+### Step 3b — Voice
 
 Ask:
 
@@ -191,7 +253,7 @@ Ask:
 >
 > Either works. Pick whichever is easier.
 
-**If Step 2 bulk ingestion captured writing samples:** skip the question and extract voice directly from the samples. Present the extracted voice spec and ask the user to review/refine rather than starting from scratch.
+**If Step 2 captured writing samples:** skip the question and extract voice directly from the samples. Present the extracted voice spec and ask the user to review/refine rather than starting from scratch.
 
 Work with whatever they give you. Produce a `me/voice.md` draft with these sections at minimum:
 - **CHARACTER** — one line
@@ -204,9 +266,7 @@ Work with whatever they give you. Produce a `me/voice.md` draft with these secti
 
 Show the draft. Confirm. Write to `me/voice.md`. **Also sync the same content to `skills/library/voice.md`** — both files must stay in sync per `_RULES.md`. Remove placeholder markers from both.
 
----
-
-## Step 5 — Doctrine seeds
+### Step 3c — Doctrine seeds
 
 Ask:
 
@@ -220,7 +280,7 @@ Ask:
 >
 > Give me 2–3 to start. Don't reach. If nothing comes to mind, tell me the last thing you got wrong and the lesson you pulled from it — that's often a doctrine in disguise.
 
-**If Step 2 bulk ingestion surfaced doctrine candidates from strategy docs:** present them first as drafts. "Based on the strategy docs you gave me, here are 4 doctrine candidates I found. Review each — keep, refine, or drop."
+**If Step 2 surfaced doctrine candidates from strategy docs:** present them first as drafts. "Based on the strategy docs you gave me, here are 4 doctrine candidates I found. Review each — keep, refine, or drop."
 
 For each doctrine the user offers, write it up in `me/doctrine.md` using this format:
 
@@ -239,9 +299,7 @@ Show the draft. Confirm. Write. Remove the placeholder marker.
 
 Tell the user: doctrines accumulate. The file starts with 2–3. In a few months it'll have 10–20. When a new pattern crystallizes, they just say `add doctrine: [name]` and you'll append it.
 
----
-
-## Step 6 — First project context
+### Step 3d — First project context
 
 Ask:
 
@@ -258,13 +316,13 @@ Read `projects/example-saas-project-context.md` as a shape reference. Draft the 
 
 Show the draft. Confirm. Write. **Do not remove the example file** — it's a reference the user will keep around as they create more project contexts.
 
-**If Step 2 bulk ingestion drafted project contexts from project briefs:** present those drafts for review one at a time, rather than asking the user to describe projects from memory. The briefs already answered most of the questions.
+**If Step 2 drafted project contexts from project briefs:** present those drafts for review one at a time, rather than asking the user to describe projects from memory. The briefs already answered most of the questions.
 
 Tell the user they can create more project contexts whenever they're ready, just by saying `create project context: [name]`.
 
 ---
 
-## Step 7 — Gobble a few things (optional, recommended)
+## Step 4 — Gobble a few things (optional, recommended)
 
 Ask:
 
@@ -272,7 +330,7 @@ Ask:
 >
 > If yes, paste them one at a time and I'll gobble them. Each one becomes a structured vault node with the transferable principle extracted and connections to your projects. This is the fastest way to feel the vault working — five minutes of ingestion and suddenly the graph has density.
 
-For each one the user provides, run the `gobble` workflow (read `workflows/library/gobble.md`, follow it, show routing plan, wait for confirm, write). Connect to the project created in Step 6 if relevant.
+For each one the user provides, run the `gobble` workflow (read `workflows/library/gobble.md`, follow it, show routing plan, wait for confirm, write). Connect to any project created in Step 3d if relevant.
 
 **After 3+ gobbles land, plant the seed for skillify.** Mention casually: *"You'll start noticing the same pattern across these sources. When that happens, say `skillify` on one and I'll turn the recurring move into a portable instruction. That's how the skills library grows — from your reading, not from scratch."*
 
@@ -280,53 +338,21 @@ If the user skips this step, tell them: "No problem. Next time you find somethin
 
 ---
 
-## Step 8 — Harvest your past thinking from Claude / ChatGPT / Gemini
-
-This is the highest-leverage step in the entire setup. Months — sometimes years — of the user's thinking, problem-solving, and project iteration live inside their LLM conversation history. Right now that thinking is invisible to this vault. One pass fixes it.
-
-Say something like:
-
-> One more step before we wrap — and this one has the biggest payoff in the whole setup.
->
-> Probably months or years of your thinking already live inside your past conversations with Claude.ai, ChatGPT, Gemini — wherever you've been working with LLMs. That history holds your projects, your patterns, the way you actually think. Right now it's invisible to this vault. We can change that in one pass.
->
-> Here's what you do. Open Claude.ai, ChatGPT, or whichever LLM you've been using most. If you're using one with a memory feature (ChatGPT Memory, Claude.ai Projects), make sure you're somewhere it has access to your history. If not, paste a few of your most substantial past conversations into a fresh chat first. Then run this prompt:
->
-> ```
-> Harvest from our shared history what would matter to a knowledge vault that's going to keep working with me. Go back as far as possible in our conversation history — surface signals from old threads, not just recent ones. Give me a structured summary of:
->
-> 1. Important conversations — topics we worked through that produced real insight, decisions, or shifted my thinking.
-> 2. Important projects — what I've been building, designing, or iterating on. Names, current state, open questions.
-> 3. Thinking patterns — mental models, frameworks, or analytical moves I rely on repeatedly.
-> 4. Behavior patterns — how I actually work. What I default to, what I avoid, where I get stuck.
-> 5. Doctrine candidates — named principles I've stated or implied, with evidence (situations, projects).
->
-> Output: section headings, named items, one-line descriptions. Be specific — name projects, name patterns. Someone reading this cold should understand what I care about and how I think. Dense over polished. I'm feeding this into a vault.
-> ```
->
-> Then paste the result back here and say `distill this`. I'll classify, split, and route everything — projects to project contexts, patterns to system-patterns, doctrine candidates to doctrine.md, ideas to _INBOX.md. In one pass, months of thinking become addressable.
->
-> If you've been heavy on more than one LLM, run the prompt in each — they'll surface different material.
->
-> Want to do it now, or come back later?
-
-If the user does it now: run the `distill` workflow on the pasted output. Show the routing plan. Confirm. Write.
-
-If the user defers: "No problem. Whenever you're ready, run that prompt and paste back. Even a single pass will dramatically densify the vault."
-
-**Note for Path B users:** If LLM exports were already in the bulk-ingest folder, this step is partially or fully done — but the harvest prompt above often surfaces material the raw exports don't (memory features pull from sources beyond the export). Worth running anyway.
-
----
-
-## Step 9 — How the vault grows with you
+## Step 5 — How the vault grows with you
 
 Before the wrap, plant the meta-frame. Say something like:
 
 > One last thing before we close out.
 >
-> The structure you see now — `me/`, `projects/`, `reading/`, `skills/`, `workflows/` — is opinionated, but not fixed. As you use the vault, you'll find places where it doesn't quite fit your work. That's a signal, not a bug. Tell me when you spot one and I'll extend the system.
+> The structure you see now — `me/`, `projects/`, `reading/`, `skills/`, `workflows/`, `agents/` — is opinionated, but not fixed. As you use the vault, you'll find places where it doesn't quite fit your work. That's a signal, not a bug.
 >
-> Three ways the vault grows:
+> **Two ways this happens:**
+>
+> **You tell me.** When you spot friction — "I keep capturing X but it doesn't fit anywhere clean" — say it. I'll propose a new file, folder, or sub-category.
+>
+> **I tell you.** I'm actively watching for evolution signals as you feed the vault. If I notice 3+ items of a flavor that don't fit existing folders well, I'll surface it: *"You've captured 4 [thing] across [places]. Want me to propose a [new file/folder]?"* You decide.
+>
+> Three flavors of growth:
 >
 > **1. New skills.** When you notice a pattern you keep applying across projects — a way you analyze, decide, build, or evaluate — say `skillify [source]`. I extract it as a reusable instruction. New skills land in `/skills/inbox/` until you've used them in real work, then get promoted to `/skills/library/`. The library is small on purpose — every skill in it has been battle-tested.
 >
@@ -334,11 +360,11 @@ Before the wrap, plant the meta-frame. Say something like:
 >
 > **3. New top-level directories.** When you try to file something and realize none of the existing folders fit, that's the signal that the structure needs to grow. A new folder is justified when the *type* of content is fundamentally different from what exists — not when you just have a lot of one kind of thing. Examples: `/health/` for body/sleep/energy doctrine, `/finance/` for actual financial principles, `/clients/` for client contexts. Don't add folders prophylactically — wait for the "this doesn't fit anywhere" signal.
 >
-> The pattern: you live with the vault, you notice friction, you name it, I extend the system. The starter structure gets you running. Your usage shapes what it becomes.
+> The pattern: you live with the vault, friction surfaces, one of us names it, the system extends. The starter structure gets you running. Your usage shapes what it becomes.
 
 ---
 
-## Step 10 — Wrap up
+## Step 6 — Wrap up
 
 Say something like:
 
@@ -348,7 +374,7 @@ Say something like:
 > - A voice I'll apply to anything public-facing
 > - [N] doctrines seeded — the start of your named principles
 > - One project context, ready for more
-> - [Optional: gobbled sources / harvested LLM history]
+> - [Optional: gobbled sources / ingested LLM history]
 >
 > Here's the entire daily habit. Whatever raw thing shows up in your day, drop it on me:
 >
