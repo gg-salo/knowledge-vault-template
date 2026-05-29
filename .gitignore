@@ -1,0 +1,35 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Obsidian workspace state (keep the app config, drop the per-machine state)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+
+# Claude Code — keep shareable config (settings.json + hooks), drop per-machine state
+.claude/*
+!.claude/settings.json
+!.claude/hooks/
+!.claude/hooks/*
+.claude/settings.local.json
+CLAUDE.local.md
+
+# Personal content (uncomment these after you've populated the vault,
+# if you want to track structure in git but keep content private)
+# me/ideas/_INBOX.md
+# me/published/_INDEX.md
+# me/drafts/
+# me/voice.md
+# me/doctrine.md
+# me/profile.md
+# projects/*.md
+# reading/articles/*.md
+# reading/repos/*.md
+# reading/threads/*.md
+# reading/doctrines/*.md
