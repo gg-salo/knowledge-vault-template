@@ -15,7 +15,7 @@ description: >
 
 > The canonical registry of every portable skill in the vault. Library = validated, ready to use. Inbox = candidates awaiting real-usage gotchas before promotion.
 >
-> **Ontology note (2026-04-16):** Vault-operating procedures (`gobble`, `distill`, `skillify`) were moved to `/workflows/library/`. They operate on this vault's specific file structure and are not portable — making them workflows, not skills. See [[_RULES#6b ONTOLOGY]] for the 5-shape diagnostic. For the workflow registry, see [[workflows/_INDEX]].
+> **Ontology note:** Vault-operating procedures (`gobble`, `distill`, `skillify`) live in `/workflows/library/`. They operate on this vault's specific file structure and are not portable — making them workflows, not skills. See [[_RULES#6b ONTOLOGY]] for the 5-shape diagnostic. For the workflow registry, see [[workflows/_INDEX]].
 
 ---
 

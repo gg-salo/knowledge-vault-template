@@ -7,7 +7,7 @@ description: >
   Annotate only. Never rewrite. Agent may suggest changes in chat;
   never silently edit.
 status: validated
-last_updated: 2026-04-26
+last_updated: YYYY-MM-DD
 ---
 
 # AGENTS.md — /me/ (Zone 1: Understanding)

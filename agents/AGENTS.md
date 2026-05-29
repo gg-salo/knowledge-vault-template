@@ -8,7 +8,7 @@ description: >
   + at least one real-usage gotcha + persona/tools/termination spec
   populated + composition_level set.
 status: validated
-last_updated: 2026-04-29
+last_updated: YYYY-MM-DD
 ---
 
 # AGENTS.md — /agents/ (Sub-Agent Definition Governance)

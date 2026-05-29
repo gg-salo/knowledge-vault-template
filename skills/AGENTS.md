@@ -7,7 +7,7 @@ description: >
   skills. Promotion to library requires human review + real-usage gotcha
   + composition_level set.
 status: validated
-last_updated: 2026-04-26
+last_updated: YYYY-MM-DD
 ---
 
 # AGENTS.md — /skills/ (Worthiness Gate Enforcement)

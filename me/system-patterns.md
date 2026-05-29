@@ -6,7 +6,7 @@ description: >
   Outward-facing — these describe how systems work, not how this vault works.
   Organized by domain. Each pattern has a description, where observed, and
   cross-domain matches.
-last_updated: 2026-04-16
+last_updated: YYYY-MM-DD
 ---
 
 # System Patterns

@@ -153,7 +153,7 @@ Strategic and narrative connections. For each project, ask: could this source se
 - Add `[[project-name]]` backlinks for each genuine connection
 - Tag each connection with its type (inbound or outbound + subtype) so the link is actionable, not just decorative
 
-### Step 7: Flag Skill Candidates (capability vs principle — updated 2026-04-24)
+### Step 7: Flag Skill Candidates (capability vs principle)
 
 A source often contains BOTH capability-shape and principle-shape candidates. Flag them separately — they produce different skill files downstream.
 
@@ -173,7 +173,7 @@ A source often contains BOTH capability-shape and principle-shape candidates. Fl
 
 **If no candidates of either kind:** write "None identified" — don't force it.
 
-### Step 7b: Flag Content Angles (added 2026-04-26)
+### Step 7b: Flag Content Angles
 
 Parallel to skill candidates, the source may contain content angles — observations, tensions, or patterns worth expressing in your own voice (NOT skill instructions an agent runs, but writing material a human shapes into a post).
 

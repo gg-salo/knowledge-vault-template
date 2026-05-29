@@ -6,7 +6,7 @@ description: >
   Per-folder write authorization for /projects/. Zone 2 — Co-authored.
   Update in place with audit trail. Append decisions; never silently delete.
 status: validated
-last_updated: 2026-04-26
+last_updated: YYYY-MM-DD
 ---
 
 # AGENTS.md — /projects/ (Zone 2: Co-authored)

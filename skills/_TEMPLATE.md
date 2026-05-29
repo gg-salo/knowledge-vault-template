@@ -1,7 +1,7 @@
 # SKILL.md — Universal Template Standard
 > For: Personal vault, agent systems, and shareable skill library
 > Version: 2.1
-> Last updated: 2026-04-16 — added ontology check (v2.1)
+> Last updated: YYYY-MM-DD — added ontology check (v2.1)
 
 ---
 
@@ -39,7 +39,7 @@ See [[_RULES#6b ONTOLOGY]] for the full 5-shape ontology and [[_RULES#6b.1 — T
 
 ---
 
-## EXTRACTION-LENS — Capability vs Principle (added 2026-04-24)
+## EXTRACTION-LENS — Capability vs Principle
 
 > Introduced after observing that skill extraction was defaulting to principle-lens (abstract instruction for humans/librarians to reference), producing skills that were rarely invokable by agents. Both lenses are valid. They produce different output shapes. Choose deliberately.
 
@@ -127,7 +127,7 @@ These are for human governance. The orchestrator does NOT read these for plannin
 | `status` | `candidate` (inbox) \| `validated` (library). |
 | `last_reviewed` | ISO date. When a human last reviewed this skill. |
 | `source` | URL if adapted from an external repo or article. |
-| `extraction-lens` | `capability` \| `principle` \| `hybrid`. Declares the intended shape — see ONTOLOGY CHECK above. Required for new skills from 2026-04-24 onward. |
+| `extraction-lens` | `capability` \| `principle` \| `hybrid`. Declares the intended shape — see ONTOLOGY CHECK above. Required for all new skill candidates. |
 | `first_invocation` | ISO date of first real run. Capability-lens skills **must** be invoked once before promotion; populate this field and the Gotchas section on that run. |
 
 ---
@@ -241,7 +241,7 @@ For skills with extensive reference material, move to `references/` and link fro
 
 ---
 
-## 5a. FIRST-INVOCATION TEST (capability-lens skills only — added 2026-04-24)
+## 5a. FIRST-INVOCATION TEST (capability-lens skills only)
 
 > **Mandatory step before promotion from inbox → library for capability-lens skills.** The pattern that drove this requirement: writing a skill well is necessary but not sufficient. The first real invocation surfaces gaps that no amount of re-reading catches — missing error handling, wrong tool names, underspecified branches, instructions that sound clear but produce ambiguous outputs.
 

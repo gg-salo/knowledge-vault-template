@@ -6,7 +6,7 @@ description: >
   Per-folder write authorization for /reading/. IMMUTABLE raw sources.
   Annotate in sidecar files only. Never modify the gobbled original.
 status: validated
-last_updated: 2026-04-26
+last_updated: YYYY-MM-DD
 ---
 
 # AGENTS.md — /reading/ (Zone 3 Input: Immutable Raw Sources)

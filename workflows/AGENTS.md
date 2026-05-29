@@ -7,7 +7,7 @@ description: >
   Not portable. Promotion gate: used in N real sessions without breaking,
   with at least one real-usage gotcha.
 status: validated
-last_updated: 2026-04-26
+last_updated: YYYY-MM-DD
 ---
 
 # AGENTS.md — /workflows/ (Vault-Coupled, Not Portable)

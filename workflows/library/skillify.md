@@ -132,7 +132,7 @@ Score explicitly. Show all four scores to the user.
 - **2/4:** Hard stop. Tell user why it scored low. Do not generate a candidate.
 - **1/4 or 0/4:** Clearly not a skill. Suggest it stays as a note in the gobble file.
 
-### Step 4: Choose the Extraction Lens — Capability or Principle (updated 2026-04-24)
+### Step 4: Choose the Extraction Lens — Capability or Principle
 
 **BEFORE extracting, decide the lens.** A source can contain both — produce both files as siblings if so. See [[_TEMPLATE]] "EXTRACTION-LENS" section for the full distinction.
 

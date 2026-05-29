@@ -7,7 +7,7 @@ description: >
   model and global rules that apply across all agent operations on this vault.
   Per-folder AGENTS.md files override these rules within their scope.
 status: validated
-last_updated: 2026-04-26
+last_updated: YYYY-MM-DD
 ---
 
 # AGENTS.md — Root Write Authorization

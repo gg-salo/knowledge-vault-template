@@ -14,8 +14,8 @@ metadata:
   type: review
   scope: all
   status: validated
-  last_reviewed: 2026-04-19
-  promoted: 2026-04-19
+  last_reviewed: YYYY-MM-DD
+  promoted: YYYY-MM-DD
   source: vault maintenance need identified during an ontology refactor; validated in a live vault run (found drift across governance files, produced real-usage gotchas)
 ---
 
@@ -203,7 +203,7 @@ Verify _SCHEMA.md exists at root and is consistent with _RULES.md sections.
 
 ### Check 14: Agents Folder Structure
 
-Verify `/agents/` folder exists with proper governance + library/inbox split (added 2026-04-29 when Agent became 7th ontology shape).
+Verify `/agents/` folder exists with proper governance + library/inbox split (added when Agent became the 7th ontology shape).
 
 **How:**
 - Confirm `/agents/library/`, `/agents/inbox/`, `/agents/_INDEX.md`, `/agents/_TEMPLATE.md`, `/agents/AGENTS.md` all exist
@@ -253,7 +253,7 @@ Verify `/agents/` folder exists with proper governance + library/inbox split (ad
 | 4 | Index drift accumulates between session boundaries | When new skills or workflows are added in one session and the relevant `_INDEX.md` isn't updated in the same routing plan, the inbox tables drift. Detection requires a `comm -23` filesystem-vs-index diff (Check 6) — count comparison alone misses it because totals can match while specific files are unindexed. | Any session that adds a skill or workflow MUST update the relevant `_INDEX.md` in the same routing plan. Treat the inbox table and the inbox directory as a single artifact. After every promote/demote, bump `last_updated`. |
 | 5 | Tri-source onboarding lists drift independently | CLAUDE.md "Session Bootstrap", vault-guide.md "Two-Minute Onboarding", and (potentially) _RULES.md preface all enumerate the canonical first-read files. Adding a new governance file (e.g., AGENTS.md, _SCHEMA.md) to one but not the others creates silent drift visible only when an agent reads from the lagging source. | Treat the three onboarding lists as ONE artifact split across three files. Any change to one requires evaluating the other two. Run Check 4 immediately after any governance addition. |
 
-*Gotchas 1-3 captured from first validation run in a live vault on 2026-04-19 after a playbook-shape refactor. Gotchas 4-5 captured 2026-04-27 after AGENTS.md hierarchy + _SCHEMA.md addition surfaced the index-drift and tri-source-onboarding patterns.*
+*Gotchas 1-3 captured from a first validation run in a live vault after a playbook-shape refactor. Gotchas 4-5 captured after the AGENTS.md hierarchy + _SCHEMA.md addition surfaced the index-drift and tri-source-onboarding patterns.*
 
 ---
 

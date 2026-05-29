@@ -1,7 +1,7 @@
 # Vault Rules — Constitution
 > Every skill that touches this vault (gobble, skillify, distill) MUST read this file before making routing decisions.
 > This is the single source of truth for how the vault operates.
-> Last updated: 2026-04-26
+> Last updated: YYYY-MM-DD
 
 ---
 
@@ -118,16 +118,14 @@ Format:
 - New skills ALWAYS go to `/skills/inbox/` — never directly to `/library/`
 - Must pass worthiness rubric (3/4 minimum) before creation
 - Must use [[_TEMPLATE]] standard format
-- Must declare `extraction-lens: capability | principle | hybrid` in metadata (added 2026-04-24)
-- Capability-lens skills require first-invocation test (see [[_TEMPLATE]] §5a) before leaving v0.1.0
+- Must declare `extraction-lens: capability | principle | hybrid` in metadata- Capability-lens skills require first-invocation test (see [[_TEMPLATE]] §5a) before leaving v0.1.0
 - voice.md is the only skill that lives in both /me/ and
   /skills/library/ — this is intentional, not a duplicate violation
 
 ### Promotion (inbox → library)
 - Requires human review
 - Gotchas section must have at least one real entry (from actual usage)
-- For capability-lens skills: gotchas must come from a first-invocation test. Speculation ("might fail if...") does not count (added 2026-04-24)
-- Backlinks must be wired to all relevant projects
+- For capability-lens skills: gotchas must come from a first-invocation test. Speculation ("might fail if...") does not count- Backlinks must be wired to all relevant projects
 
 ### Overlap Resolution
 1. Proven-in-production beats external — always
@@ -169,7 +167,7 @@ Format:
 
 ## 6b. ONTOLOGY — What Goes Where
 
-> Added 2026-04-16 after the skills-library audit revealed that ~30% of inbox candidates were misfiled principles and architectural patterns, not executable skills. This section is the diagnostic test used by [[skillify]] and [[_TEMPLATE]] to route extractions to the correct location. Getting the shape wrong pollutes both folders: valuable material becomes undiscoverable because it's in the wrong place.
+> Added after a skills-library audit revealed that a meaningful share of inbox candidates were misfiled principles and architectural patterns, not executable skills. This section is the diagnostic test used by [[skillify]] and [[_TEMPLATE]] to route extractions to the correct location. Getting the shape wrong pollutes both folders: valuable material becomes undiscoverable because it's in the wrong place.
 
 The vault assumes extracted intelligence fits one of seven shapes:
 
@@ -214,7 +212,7 @@ If an inbox item is in the wrong category, move it and flag the move in the targ
 
 ## 6b.1 — The Pairing Pattern: Sibling Files, Not Alternatives
 
-> Added 2026-04-16 after the portability audit revealed that the 5-shape ontology in Section 6b was being read as mutually exclusive, when the vault's actual working pattern is that a single concept can exist as multiple sibling files simultaneously.
+> Added after a portability audit revealed that the 5-shape ontology in Section 6b was being read as mutually exclusive, when the vault's actual working pattern is that a single concept can exist as multiple sibling files simultaneously.
 
 A concept is NOT limited to one shape. A single idea can have up to four sibling files:
 
@@ -269,7 +267,7 @@ These are siblings, not alternatives. Each file is editable independently. None 
 
 ## 6b.2 — The 2-Instance Rule: Guardrail Against Speculative Branching
 
-> Added 2026-04-18 after adopting "playbook" as a 6th shape. Without this rule, any new domain-knowledge pattern observed in a reference library (community vaults often carry 8-10 shapes: playbooks, frameworks, mental-models, heuristics, case-studies, failure-case-studies, anti-patterns, practitioners, insights-trends) risks speculative mirroring — creating empty `/me/frameworks/`, `/me/case-studies/`, `/me/mental-models/` directories before the user has actually authored anything of those shapes. The vault would branch faster than it accumulates.
+> Added after adopting "playbook" as a 6th shape. Without this rule, any new domain-knowledge pattern observed in a reference library (community vaults often carry 8-10 shapes: playbooks, frameworks, mental-models, heuristics, case-studies, failure-case-studies, anti-patterns, practitioners, insights-trends) risks speculative mirroring — creating empty `/me/frameworks/`, `/me/case-studies/`, `/me/mental-models/` directories before the user has actually authored anything of those shapes. The vault would branch faster than it accumulates.
 
 ### The Rule
 

@@ -8,7 +8,7 @@ description: >
   skills (the inherit-context counterpart). Read when asked about
   agents in aggregate or when deciding whether a new spawn-shaped
   artifact is an agent or a skill.
-last_updated: 2026-04-29
+last_updated: YYYY-MM-DD
 ---
 
 # Agents Index

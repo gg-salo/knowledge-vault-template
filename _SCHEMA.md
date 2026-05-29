@@ -8,7 +8,7 @@ description: >
   for vault data shape; pulls from _RULES.md sections that were scattered
   across §1, §6, §6b, §6c, §10, §11.
 status: validated
-last_updated: 2026-04-26
+last_updated: YYYY-MM-DD
 ---
 
 # _SCHEMA.md — Vault Data Shape Reference

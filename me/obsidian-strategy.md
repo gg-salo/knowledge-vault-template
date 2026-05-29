@@ -93,7 +93,7 @@ When adding a new area:
 
 ---
 
-## Core Decision 8: Content Workflow Pipeline (added 2026-04-26)
+## Core Decision 8: Content Workflow Pipeline
 
 Content production from the vault runs as a 5-stage pipeline of vault-operating workflows on top of existing primitives. Each stage does one thing; the chain composes:
 
