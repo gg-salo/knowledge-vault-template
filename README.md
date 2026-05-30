@@ -82,55 +82,48 @@ Optionally open the same folder in [Obsidian](https://obsidian.md) for the graph
 
 ## What the setup will ask you
 
-Claude offers two paths through setup. Pick whichever fits what you have ready.
+Setup is **6 steps, ~20-30 minutes** (less if Path A is rich). It opens with two quick orientation questions, then walks through the foundation.
 
-### Path A — Conversational
+### Two quick questions up front
 
-Claude asks you questions, you answer, Claude drafts files, you confirm. No prep required. About 30 minutes for the core.
+**1. What kind of work do you do?** One or two lines — engineering, content/writing, research, consulting, product, design, founder, mix. This shapes how Claude routes your material from the first ingestion AND activates the **Vault Evolution Watch** — Claude actively watches your usage and proposes new folders, files, or structures that fit your domain over time. (More on that below.)
 
-### Path B — Bulk material first (dramatically faster if you have raw material)
+**2. Path A or Path B?**
 
-If you already have stuff lying around on your machine — a CV, past writings you're proud of, old strategy docs, loose memos, drafts, project briefs, personality assessments, anything you've ever written about yourself or your work — **drop it all into a single folder first**. The folder can be completely chaotic. Unorganized. Mixed formats. Random filenames. Doesn't matter.
+#### Path A — Bulk material (strongly recommended)
 
-Then during setup, give Claude the path to that folder. Claude will:
+If you have raw material lying around — CV, past writings, strategy docs, old notes, project briefs, drafts, memos, personality assessments, **exported LLM conversation history** — drop it all into a single folder and point Claude at it. Folder, folder of folders, nested chaos, mixed formats, garbage filenames — all fine. Claude scans recursively, classifies everything, routes it across the vault before the guided questions.
 
-1. Scan every file and classify it
-2. Show you a full routing plan (what goes where and why)
-3. Wait for your approval
-4. Route everything into the vault with proper backlinks
-5. Use what it learned to pre-draft the guided steps
+By the time you reach the "who are you?" question, your profile is already drafted from your CV. By the voice step, voice is already extracted from real writing samples. By the doctrine step, candidates are already surfaced from your strategy docs. **You review and refine instead of typing from memory.**
 
-By the time you reach the "who are you?" question, your profile is already drafted from the CV. By the voice step, voice is already extracted from your real writing. By the doctrine step, candidates are already surfaced from your strategy docs. You're reviewing and refining instead of typing from memory.
+Your past LLM conversations are often the single highest-leverage source. Export instructions:
 
-**This is the single biggest time-saver in the whole setup.** If you have even a small folder of raw material, Path B is worth the 5 minutes it takes to gather it.
+- **Claude.ai** → Settings → Privacy → Export data
+- **ChatGPT** → Settings → Data Controls → Export Data (emailed download link)
+- **Gemini** → [takeout.google.com](https://takeout.google.com)
+
+Drop the export files in the same folder as everything else. If you can't or won't deal with the export UI, Claude will give you a **harvest prompt** to paste into your LLM (with memory enabled) — the output becomes a file in your folder. Same result.
+
+**Five minutes of gathering saves you an hour of typing from memory.** And the vault ends up richer because the source is real instead of remembered.
+
+#### Path B — Cold start
+
+Genuinely have nothing on hand? Claude asks questions, you answer, Claude drafts, you confirm. Works fine, just slower and thinner because we're working from memory instead of evidence.
 
 You can also mix the two paths — bulk-ingest some things, talk through the rest.
 
 ---
 
-### What setup populates, either way
+### What the 6 steps cover
 
-Regardless of which path you pick, setup covers these essentials:
-
-**1. Who you are.** A short profile — what you do, what you're building, what you care about. This becomes `me/profile.md`.
-
-**2. Your voice.** How you write when you're at your best. Character, baseline, what you never do. This becomes `me/voice.md` and gets applied to every public-facing thing you ask Claude to draft. Don't overthink this — you'll refine it over time.
-
-**3. Your doctrine seeds.** Principles you've observed repeatedly in your work. Not rules from books. Patterns *you* have evidence for. Start with 2-3. This becomes `me/doctrine.md`. New doctrines get added as you notice them.
-
-**4. Your first project.** Pick one active project. Claude will create a context file for it using the example template as a guide. You'll probably end up with one per project eventually.
-
-**5. Gobble your active reading.** If you have 3-5 repos, articles, or threads currently influencing your thinking, Claude can ingest them one by one. This is the fastest way to see the vault "click" — external sources get structured, connected to projects, and scanned for reusable patterns.
-
-**6. (Optional, high-leverage) Distill your conversation history.** Another big unlock: take your past conversations with Claude.ai and ChatGPT and route them into the vault.
-
-- Go to [Claude.ai](https://claude.ai/) → each conversation → copy as markdown. Or export all via Settings → Export Data.
-- Go to [ChatGPT](https://chatgpt.com/) → Settings → Data Controls → Export Data.
-- Before pasting raw transcripts into the vault: ask the web version of Claude or ChatGPT to **produce a distillable summary** of each conversation — what was discussed, what was decided, what patterns emerged, what open questions remain.
-- Then paste those summaries into a Claude Code session at vault root and say: `distill this`.
-- Claude will classify, split, and route the content across the vault in one pass. Months of thinking you couldn't find before suddenly become addressable.
-
-This step is optional. Skip it and come back when you want the payoff.
+| Step | What happens |
+|---|---|
+| **1. Greet, orient, choose path** | The two questions above. ~2 min. |
+| **2. Bulk Material Ingestion** *(Path A only)* | Claude scans your folder, shows routing plan, writes everything across the vault with backlinks. Domain-aware via your work-type answer. |
+| **3. Foundation** | Four files that anchor everything else: profile, voice, doctrine seeds, first project context. For Path A users: fast confirmations of drafts already prepared. For Path B users: conversational seeding. |
+| **4. Gobble active reading** | 3-5 repos, articles, or threads currently influencing your thinking. Each becomes a structured vault node with the transferable principle extracted and connections to your projects. Fastest way to see the vault "click." |
+| **5. How the vault grows with you** | Quick frame on the three ways the vault evolves (new skills, new workflows, new top-level dirs) and the Vault Evolution Watch. |
+| **6. Wrap up** | Daily habit, weekly maintenance, optional tooling install. |
 
 ---
 
@@ -200,7 +193,11 @@ The value isn't in any single file. It's in the accumulated judgment that become
 
 ## How the vault evolves
 
-The starter structure is opinionated but not fixed. As you use it, you'll find you need areas it doesn't cover. Add them.
+The starter structure is opinionated but not fixed. As you use it, you'll find you need areas it doesn't cover. Two ways that happens:
+
+**You tell Claude.** Spot friction — "I keep capturing X but it doesn't fit anywhere clean" — and say it. Claude proposes a new file, folder, or sub-category, you confirm.
+
+**Claude tells you.** The **Vault Evolution Watch** (configured in `CLAUDE.md`) keeps the librarian actively scanning for structural signals. When 3+ items of the same flavor pile up in places that don't fit them well, Claude surfaces it as a question: *"You've captured 4 [thing] across [places]. Want me to propose a [new file/folder]?"* You decide. The watch uses your work-type answer from setup to bias toward evolutions that fit your domain.
 
 **Adding a new top-level area is trivial.** Create a folder, add it to `_RULES.md` Section 1 (canonical locations), and start using it. A few common extensions:
 
