@@ -53,6 +53,8 @@ The template is empty. Everything that makes it valuable — your voice, your do
 
 **Seven ontology shapes:** skill · workflow · doctrine · vault-strategy · system-pattern · playbook · agent. See `_RULES.md §6b` for the diagnostic that routes any new content to the right shape.
 
+**`library/` vs `inbox/`.** Same split everywhere it appears (skills, workflows, agents): new entries land in `/inbox/` first. Promotion to `/library/` requires real-usage validation plus at least one captured gotcha from actual failure. The split protects against the "looked good in theory, broke in practice" failure mode. Library = battle-tested. Inbox = candidates.
+
 **Federation is optional.** The template prepares your vault to connect with others (a team, a DAO, a cohort) without shipping the implementation itself. Two structural conventions — every entry declaring its `type`, substantive entries carrying an `abstraction:` block — make your vault *mergeable-ready* whether or not you ever federate. The same conventions are good hygiene regardless. When you're ready to join a federation, the workflow ships with the hub you join. See `FEDERATION.md` for the full explanation.
 
 ---
@@ -170,6 +172,32 @@ Just ask. The power commands are in `CLAUDE.md` — you'll discover them as you 
 | `cross-stack eval: [paste idea]` | Does this new idea compound what exists, or add noise? |
 
 **Don't memorize them.** Keep `CLAUDE.md` open when you need one. The habit to build is the daily loop. Everything else is a tool you reach for when you notice a need.
+
+---
+
+## What it looks like in practice
+
+A concrete example. You paste a URL:
+
+```
+gobble: https://example.com/an-interesting-article
+```
+
+Claude reads the article, scans your existing vault for connections, comes back with a routing plan:
+
+> *I'll create `reading/articles/[slug].md` with the article's argument and transferable principle. Backlinks: `projects/project-x-context.md` (the architecture discussion overlaps) and `me/doctrine.md#the-review-gap` (the article reinforces it). I spotted 2 skill candidates — flagging them in the file, both score 4/4 on the worthiness rubric. Want me to skillify either one? Confirm the routing plan?*
+
+You: `go`. Three files updated, 5 backlinks created, 2 skill candidates flagged for later. The article is now part of your graph — addressable to every future session, not a dead bookmark in a browser folder.
+
+Multiply that by ~10 things you read per week, and after a month you've built a connected substrate that thinks alongside you instead of sitting inert.
+
+### Why connections compound
+
+Every substantive note carries a small **`abstraction:` block** in its frontmatter — concrete (what it specifically is), abstract (the underlying pattern, domain-agnostic), and optional fundamental (the deepest principle). Plus a `matches` field listing other domains where the abstract pattern appears.
+
+This is what enables cross-domain surfacing. When you gobble a new article, the librarian doesn't just match keywords — it matches abstract patterns. A note on "swarm intelligence" surfaces when you ask about "parallel coding agents" because both carry the same abstract shape, even though their concrete subjects share no vocabulary.
+
+On top of that, every backlink is **typed** (`powers`, `feeds`, `shares-dna`, `parallel-bet`, `supersedes`, `depends-on`...) — so the graph edges carry meaning. Traversal isn't just "what's nearby"; it's "what enables this," "what conflicts with this," "what was this derived from." Systematic serendipity, by design.
 
 ---
 
