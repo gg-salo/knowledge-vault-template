@@ -104,6 +104,7 @@ Fall back down the list only when the higher tier can't answer. If you haven't r
 ### On Demand — Strategy
 | Command | What It Does |
 |---------|-------------|
+| `review PRD: [paste]` | Read _RULES.md + `/workflows/inbox/review-prd.md`. Review the PRD against vault intelligence — doctrines, project contexts, skill gaps, prior pattern matches. Every suggestion cites a vault file. |
 | `adversarial review: [paste plan]` | Read doctrine.md. Attack the plan before execution. Name the failure modes. |
 | `cross-stack eval: [paste idea]` | Read all project contexts. Does this compound what exists or add noise? |
 
