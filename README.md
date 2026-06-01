@@ -147,7 +147,9 @@ That's it. Every session you open there has the entire vault loaded as native co
 - **Wondering if an idea is fresh or you've already had it?** The vault knows. Ask.
 - **Reviewing a plan?** `review PRD: [paste]` and every suggestion cites a vault file. No generic advice.
 
-The vault is your **context layer.** The model is interchangeable; what makes your conversations sharper than the same model from a blank chat window is the substrate it's reading from. Setup builds the substrate, the daily habit maintains it, and **every Claude Code session opened against the vault is where the actual work happens** — strategy, drafting, review, the decisions that compound.
+**No terminal? Use Claude Desktop instead.** Configure the desktop app with a filesystem connector pointed at your vault directory (Settings → Connectors), and every conversation in the app inherits the same substrate. Claude Code (terminal) is recommended for full read/write workflows — `gobble`, `distill`, `skillify`, `sync context` all update files end-to-end — but Claude Desktop works great for "ask my vault" style usage when you just want to think against your accumulated context without leaving the chat UI.
+
+The vault is your **context layer.** The model is interchangeable; what makes your conversations sharper than the same model from a blank chat window is the substrate it's reading from. Setup builds the substrate, the daily habit maintains it, and **every Claude session opened against the vault is where the actual work happens** — strategy, drafting, review, the decisions that compound.
 
 If you ever find yourself opening a Claude.ai web tab to ask a question instead of opening Claude Code in your vault directory, that's the signal you've forgotten the unlock. Close the tab. Open the vault. Ask there.
 
@@ -276,8 +278,8 @@ The methodology is replicable. The accumulated intelligence isn't. **That's the 
 
 ---
 
-## Credits
+## Origin
 
-This template is derived from a live, mature vault that has been used daily for knowledge work, strategic planning, and content production. The pre-validated skill (`voice`) and workflows (`gobble`, `skillify`, `distill`, `sync-context`, `vault-consistency-check`) along with the `_RULES.md` constitution + `_SCHEMA.md` reference + `AGENTS.md` hierarchy have been battle-tested — the architecture is proven. The personal content is yours to build.
+Extracted from a mature personal vault used daily for knowledge work, strategy, and content production. The architecture — `_RULES.md` constitution, `_SCHEMA.md` reference, `AGENTS.md` hierarchy, the seven-shape ontology, the inbox → library promotion lifecycle, the pre-validated skill (`voice`) and workflows (`gobble`, `distill`, `skillify`, `sync-context`, `vault-consistency-check`) — has been battle-tested through real use. The personal content is yours to build.
 
-Questions, improvements, or contributions welcome.
+Issues, ideas, and contributions welcome via [GitHub](https://github.com/gg-salo/knowledge-vault-template).
