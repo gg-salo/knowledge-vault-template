@@ -129,6 +129,30 @@ You can also mix the two paths — bulk-ingest some things, talk through the res
 
 ---
 
+## How you use it day-to-day
+
+Once setup is done, the daily interface is one command:
+
+```bash
+cd /path/to/your/vault
+claude
+```
+
+That's it. Every session you open there has the entire vault loaded as native context — your profile, your voice, your doctrines, every project, every gobbled source, every captured idea, every distilled conversation. You never upload, paste, or remind. The vault *is* the context.
+
+**What this changes:**
+
+- **Asking Claude's opinion on a new spec?** It already knows what you've built — current projects, architectural decisions, the doctrines that should apply.
+- **Drafting a post?** Voice, recent reading, relevant doctrines, and prior published work are loaded by default.
+- **Wondering if an idea is fresh or you've already had it?** The vault knows. Ask.
+- **Reviewing a plan?** `review PRD: [paste]` and every suggestion cites a vault file. No generic advice.
+
+The vault is your **context layer.** The model is interchangeable; what makes your conversations sharper than the same model from a blank chat window is the substrate it's reading from. Setup builds the substrate, the daily habit maintains it, and **every Claude Code session opened against the vault is where the actual work happens** — strategy, drafting, review, the decisions that compound.
+
+If you ever find yourself opening a Claude.ai web tab to ask a question instead of opening Claude Code in your vault directory, that's the signal you've forgotten the unlock. Close the tab. Open the vault. Ask there.
+
+---
+
 ## The daily habit (the whole thing)
 
 The vault only works if you use it. But the daily habit is tiny — **do not try to do everything at once.**
