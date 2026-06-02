@@ -254,4 +254,4 @@ The methodology is replicable. The accumulated intelligence isn't. **That's the 
 
 Extracted from a mature personal vault used daily for knowledge work, strategy, and content production. The architecture — constitution, schema, agent-authorization hierarchy, seven-shape ontology, inbox → library promotion lifecycle, pre-validated skill and workflows — has been battle-tested through real use. The personal content is yours to build.
 
-Issues, ideas, and contributions welcome via [GitHub](https://github.com/gg-salo/knowledge-vault-template).
+Issues, ideas, and contributions welcome via [GitHub](https://github.com/gg-salo/knowledge-vault-template) — or reach me on X at [@goncalo_pr_](https://x.com/goncalo_pr_).
