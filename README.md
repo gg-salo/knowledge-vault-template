@@ -10,13 +10,15 @@ You feed it; Claude does the filing. Every Claude session opened against the vau
 
 ## Quick start
 
-**Claude Desktop (no terminal needed):**
+**Claude desktop app (no terminal needed):**
 
-1. Clone or download this repo into a folder on your machine
-2. Open Claude Desktop → Settings → Connectors → add the **Filesystem** connector pointed at that folder
-3. In a new chat, say: *"Help me set up this knowledge vault."*
+1. On this page, click the green **Code** button → **Download ZIP**. Unzip it somewhere stable (Documents works) and rename the folder if you like, e.g. `my-vault`
+2. Open the [Claude desktop app](https://claude.ai/download), switch to the **Code** tab and select that folder. The Code tab needs a paid Claude plan; Pro is enough
+3. Type: *"Help me set up this knowledge vault."*
 
-Claude finds `CLAUDE.md`, detects the fresh vault, and walks you through 6 steps in ~20-30 minutes.
+Claude reads `CLAUDE.md`, detects the fresh vault, and walks you through 6 steps in ~20-30 minutes. Have a folder of raw material ready (CV, writing, notes, decks, exported AI chats) and setup drafts your profile and voice from it. See Path A under [Setup details](#setup-details).
+
+> Already added a Filesystem connector in a regular chat? No harm, but run the vault from the **Code** tab: it loads `CLAUDE.md` and the vault's rules automatically every session, which a regular chat does not.
 
 **Via terminal (Claude Code):**
 
@@ -78,7 +80,7 @@ The value isn't in any single file. It's in the accumulated judgment becoming ad
 
 ## How you use it day-to-day
 
-Whatever interface you chose (Claude Desktop or Claude Code), every session you open against the vault has the entire substrate loaded as native context — your profile, your voice, your doctrines, every project, every gobbled source, every captured idea, every distilled conversation. You never upload, paste, or remind. The vault *is* the context.
+Whichever way you open it (the desktop app's Code tab or `claude` in a terminal), every session you open against the vault has the entire substrate loaded as native context — your profile, your voice, your doctrines, every project, every gobbled source, every captured idea, every distilled conversation. You never upload, paste, or remind. The vault *is* the context.
 
 **What this changes:**
 
